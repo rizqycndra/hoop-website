@@ -207,3 +207,23 @@
 body {
     font-family: GeneralSans-Regular;
 }
+
+input {
+    /* Reset margin dan padding */
+    margin: 0;
+    padding: 0;
+  
+    /* Reset border */
+    border: none;
+  
+    /* Reset font styles */
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+  
+    /* Reset form-related styles */
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent;
+    outline: none;
+  }
