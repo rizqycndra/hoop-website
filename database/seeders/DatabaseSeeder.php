@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         Product::factory(10)->create();
         Category::factory(4)->create();
         for ($i = 1; $i <= 10; $i++) { 
-            Product::find($i)->categories()->attach([rand(0, 1), rand(2, 3)]);
+            Product::find($i)->categories()->attach([rand(1, 2), rand(2, 3)]);
         }
         Review::factory(20)->create();
         for ($i = 1; $i <= 3; $i++) { 
