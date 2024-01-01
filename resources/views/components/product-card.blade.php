@@ -1,5 +1,5 @@
 {{-- CONTAINER --}}
-<a class="p-2" href="#">
+<a class="p-2 hover:bg-g2/10 rounded-3xl [&_h3]:hover:text-blue-500" href="#">
     {{-- IMAGE --}}
     <div class="aspect-square overflow-hidden rounded-2xl">
         <img class="w-full" src="{{ $data->image[0] }}" alt="Product Image">

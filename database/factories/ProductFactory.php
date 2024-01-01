@@ -21,7 +21,7 @@ class ProductFactory extends Factory
             "price"         => $this->faker->randomNumber(2) * 100000,
             "short_desc"    => $this->faker->sentence(6),
             "description"   => $this->faker->paragraph(2),
-            "image"         => json_encode(['https://source.unsplash.com/random/640x640?minimalist,product']),
+            "image"         => ['https://source.unsplash.com/random/640x640?minimalist,product' . rand(1, 10)],
         ];
     }
 }

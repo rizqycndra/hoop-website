@@ -4,7 +4,7 @@
 
     @if (isset($category->name))
         <div class="max-w-screen-xl mx-auto px-5 mt-5">
-            <h1 class="text-[32px] font-bold">{{ $category->name }}</h1>
+            <h1 class="text-[32px] font-bold capitalize">{{ $category->name }}</h1>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 px-2 gap-y-4 max-w-screen-xl mx-auto md:px-5">
