@@ -1,2 +1,3 @@
-import './bootstrap';
-import './navbar';
+import './bootstrap'
+import './navbar'
+import './bigbanner'

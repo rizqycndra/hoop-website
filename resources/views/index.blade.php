@@ -2,6 +2,6 @@
 
 @section('body')
     
-    
+    <x-big-banner :data="$banner"/>
 
 @endsection
