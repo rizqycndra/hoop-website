@@ -39,7 +39,8 @@
                 </button>
 
                 {{-- FORM --}}
-                <form action="/search" class="w-full py-2 pl-2 sm:pl-4 pr-2 flex items-center justify-between">
+                <form action="/search" method="POST" class="w-full py-2 pl-2 sm:pl-4 pr-2 flex items-center justify-between">
+                    @csrf
                     <input type="text" name="q" placeholder="Search..." class="w-full"/>
                     <button type="submit">
                         <span class="iconify text-[20px] sm:text-[24px] text-g2 hover:text-g1 transition-colors" data-icon="akar-icons:search"></span>
@@ -140,7 +141,8 @@
         <div class="flex rounded-md bg-w2 w-full items-center px-1 py-0 sm:py-1 sm:px-2">
 
             {{-- FORM --}}
-            <form action="/search" class="w-full py-3 px-3 flex items-center justify-between">
+            <form action="/search" method="POST" class="w-full py-3 px-3 flex items-center justify-between">
+                @csrf
                 <input type="text" name="q" placeholder="Search..." class="w-full"/>
                 <button type="submit">
                     <span class="iconify text-[20px] sm:text-[24px] text-g2 hover:text-g1 transition-colors" data-icon="akar-icons:search"></span>

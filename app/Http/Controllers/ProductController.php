@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use App\Models\Product;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
@@ -62,5 +63,21 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+    }
+
+    public function search(Request $request)
+    {
+        $request->validate([
+            "q" => ['required', 'max:255']
+        ]);
+
+        $query = $request->input('q');
+
+        $result = Product::searching(["name", "description"], $query);
+
+        return view('search', [
+            "query"     => $query,
+            "products"  => $result
+        ]);
     }
 }

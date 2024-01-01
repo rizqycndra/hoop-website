@@ -15,11 +15,22 @@ class Product extends Model
         "image" => "array"
     ];
 
-    public function categories() {
+    public function categories()
+    {
         return $this->belongsToMany(Category::class);
     }
 
-    public function reviews() {
+    public function reviews()
+    {
         return $this->hasMany(Review::class);
+    }
+
+    public static function searching($columns = [], $query)
+    {
+        return self::where(function ($queryBuilder) use ($columns, $query) {
+            foreach ($columns as $column) {
+                $queryBuilder->orWhere($column, 'LIKE', '%' . $query . '%');
+            }
+        })->get();
     }
 }
