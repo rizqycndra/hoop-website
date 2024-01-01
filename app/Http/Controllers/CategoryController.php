@@ -12,12 +12,10 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index($id)
+    public function index()
     {
-        $category = Category::with('products')->find($id);
-        return view('category', [
-            "category"  => $category,
-            "product"   => $category->products ?? []
+        return view('categories', [
+            "categories"  => Category::all('id', 'name'),
         ]);
     }
 
@@ -40,9 +38,13 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function show($id)
     {
-        //
+        $category = Category::with('products')->find($id);
+        return view('category', [
+            "category"  => $category,
+            "product"   => $category->products ?? []
+        ]);
     }
 
     /**
