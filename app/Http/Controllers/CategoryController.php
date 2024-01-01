@@ -5,15 +5,20 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\Category;
+use App\Models\Product;
 
 class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($id)
     {
-        //
+        $category = Category::with('products')->find($id);
+        return view('category', [
+            "category"  => $category,
+            "product"   => $category->products ?? []
+        ]);
     }
 
     /**
