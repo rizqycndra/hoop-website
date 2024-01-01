@@ -151,10 +151,10 @@
 
         {{-- CATEGORY BUTTON --}}
         <div class="mt-3">
-            <button id="navbarMSCategory" class="py-2 px-3 w-full bg-w2 hover:bg-g2/50 rounded-md flex items-center justify-center gap-2">
+            <a href="category" id="navbarMSCategory" class="py-2 px-3 w-full bg-w2 hover:bg-g2/50 rounded-md flex items-center justify-center gap-2">
                 <span class="font-[GeneralSans-Medium]">Category</span>
                 <span class="iconify" data-icon="mingcute:right-line"></span>
-            </button>
+            </a>
         </div>
 
         {{-- SHIPMENT PICKER --}}
