@@ -5,4 +5,5 @@
     <title>{{ !is_null($title ?? null) ? $title . " | Hoop - Ecommerce" : "Hoop - Ecommerce" }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
